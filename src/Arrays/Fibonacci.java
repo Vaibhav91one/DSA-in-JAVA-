@@ -34,3 +34,14 @@ public class Fibonacci {
         System.out.println(c);
     }
 }
+
+/*
+
+Idea:
+In the recursive fibonacci if n == 0 or n == 1 we return n
+else we call fibonacci such that fib(n-1) + fib(n-2)
+this call will keep executing unless n becomes 0 or 1
+
+In the iterative one we start the loop from n = 2 because the n=0 and n=1 are defined as a,b and c is the result.
+we keep doing c = a + b and a = b, b = c (we are changing a and b with the next values needed for the next fibonacci number)
+*/

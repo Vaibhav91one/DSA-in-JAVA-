@@ -61,3 +61,12 @@ public class Operations {
     }
 
 }
+
+/*
+Idea:
+searching is simple we just go through every element. This is called linear search
+Insert: We start from the end and keep shifting the element such that a[i+1] = a[i] until we reach the position we want to insert at.
+        afterward we just insert such that arr[index] = x
+Delete: First, we run a loop, we find the index of the element we want to delete, and we break if we found the element lets assume the index is i.
+        then we run another loop from j = i and shift element back such that a[j] = a[j+1]
+*/
