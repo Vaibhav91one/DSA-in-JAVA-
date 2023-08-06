@@ -6,7 +6,11 @@ import java.util.ArrayList;
 public class PowerSet {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3};
-        PowerSet(nums);
+        ArrayList<Integer> A = new ArrayList<Integer>();
+        A.add(1);
+        A.add(2);
+        A.add(3);
+        System.out.println(subsets(A));
     }
 
     public static void PowerSet(int[] nums) {
@@ -25,5 +29,21 @@ public class PowerSet {
             listOfLists.add(list1);
         }
         System.out.println(listOfLists);
+    }
+    public static ArrayList<ArrayList<Integer>> subsets(ArrayList<Integer> A)
+    {
+        ArrayList<ArrayList<Integer>> arr = new ArrayList<ArrayList<Integer>>();
+        int n = A.size();
+        double power = Math.pow(2, A.size());
+        for(int counter = 0; counter < power; counter++){
+            ArrayList<Integer> arr1 = new ArrayList<Integer>();
+            for (int j = 0; j < n; j++){
+                if((counter & 1 << j) != 0){
+                    arr1.add(A.get(j));
+                }
+            }
+            arr.add(arr1);
+        }
+        return arr;
     }
 }
