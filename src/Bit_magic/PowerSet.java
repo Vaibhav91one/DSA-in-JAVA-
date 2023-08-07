@@ -46,4 +46,18 @@ public class PowerSet {
         }
         return arr;
     }
+
+    public static List<String> AllPossibleStrings(String s)
+    {
+        int n = s.length();
+        List<String> a = new ArrayList<String>();
+        double power = Math.pow(2, n);
+        for(int counter = 0; counter < power; counter++){
+            for(int j = 0; j < n; j++){
+                if((counter & 1<<j) != 0) a.add(String.valueOf(s.toCharArray()[j]));
+            }
+        }
+        return a;
+    }
 }
+
