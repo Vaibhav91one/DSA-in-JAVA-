@@ -29,3 +29,7 @@ public class TrappingRainWater {
         return res;
     }
 }
+
+/*
+Idea for this is shared at my leetcode profile: https://leetcode.com/Lethal_Bypass/
+ */
