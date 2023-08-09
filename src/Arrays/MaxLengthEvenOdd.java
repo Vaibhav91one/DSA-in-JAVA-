@@ -2,14 +2,14 @@ package Arrays;
 
 public class MaxLengthEvenOdd {
     public static void main(String[] args) {
-        int[] nums = {2,3,4,5};
+        int[] nums = {2};
         int[] nums2 = {42,43,44,43,44,43,44,45,46};
-        int threshold = 4;
+        int threshold = 2;
 //        System.out.println(longestAlternativeSubarray(nums2));
-        System.out.println(OddSumApproach(nums2));
-        //        System.out.println(longestAlternatingSubarray(nums, threshold));
+//        System.out.println(OddSumApproach(nums2));
+                System.out.println(longestAlternatingSubarray(nums, threshold));
     }
-
+//    Normal Sub-array
     public static int longestAlternativeSubarray(int[] nums) {
         int res = 1;
         int curr = 1;
@@ -53,18 +53,26 @@ public class MaxLengthEvenOdd {
         int n = nums.length;
 
         for (int i = 0; i < n; i++) {
-            if (nums[i] > threshold) {
-                curr = 0;
-            }
-            else if ((i > 0 && nums[i] % 2 == 0 && nums[i - 1] % 2 != 0 ) || ( i > 0 && nums[i] % 2 != 0 && nums[i - 1] % 2 == 0)) {
+            curr = 0;
+            if (nums[i] % 2 == 0 && nums[i] <= threshold) {
                 curr++;
-                res = Math.max(res, curr);
-            }
-            else {
-                curr = nums[i] % 2 == 0 ? 1 : 0;
+                while(i+1 < n){
+                    if((nums[i+1] % 2 != nums[i] % 2) && (nums[i+1] <= threshold)){
+                      curr++;
+                    }
+                    else{
+                        break;
+                    }
+                    i++;
+                }
+            res = Math.max(res,curr);
             }
         }
         return res;
     }
 }
+
+/*
+Idea for this is shared at my leetcode profile: https://leetcode.com/Lethal_Bypass/
+ */
 

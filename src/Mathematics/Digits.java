@@ -6,9 +6,9 @@ import static java.lang.Math.log10;
 public class Digits {
     public static void main(String[] args){
         int i = 1234;
-//        DigitsCountIterative(i);
+        DigitsCountIterative(i);
 //        System.out.println(DigitsCountRecursive(i));
-        System.out.println(DigitsCountLogarithmic(i));
+//        System.out.println(DigitsCountLogarithmic(i));
     }
 
     public static void DigitsCountIterative(int n){
@@ -16,6 +16,7 @@ public class Digits {
         while(n != 0){
             System.out.println(n%10);
             n = n/10;
+            System.out.println(n);
             count++;
         }
         System.out.println(count);
