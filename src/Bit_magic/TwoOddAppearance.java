@@ -2,8 +2,8 @@ package Bit_magic;
 import java.util.Arrays;
 public class TwoOddAppearance {
     public static void main(String[] args){
-        int N = 8;
-        int[] Arr = {4, 2, 4, 5, 2, 3, 3, 1};
+        int N = 6;
+        int[] Arr =  {1, 2, 3, 2, 1, 4};
         System.out.println(Arrays.toString(TwoOdd(Arr, N)));
     }
 
@@ -23,7 +23,7 @@ public class TwoOddAppearance {
             }
         }
         Arrays.sort(res);
-        reverse(res);
+//        reverse(res);
         return res;
     }
     public static void reverse(int[] array)

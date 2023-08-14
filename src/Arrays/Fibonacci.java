@@ -3,7 +3,7 @@ package Arrays;
 public class Fibonacci {
 
     public static void main(String[] args) {
-        int n = 10;
+        int n = 17;
         for (int i = 0; i < n; i++) {
             System.out.print(PrintFibonacciRecursive(i) + " ");
         }
