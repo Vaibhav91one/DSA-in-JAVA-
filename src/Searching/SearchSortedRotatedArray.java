@@ -2,8 +2,8 @@ package Searching;
 
 public class SearchSortedRotatedArray {
     public static void main(String[] args){
-        int[] nums = {3,1};
-        int target = 1;
+        int[] nums = {2,5,6,0,0,1,2};
+        int target = 3;
         System.out.println(search(nums,target));
     }
 
@@ -14,9 +14,15 @@ public class SearchSortedRotatedArray {
 
         while(low <= high){
             int mid = (low + high)/2;
-            System.out.println(mid);
 
             if(nums[mid] == target) return mid;
+
+            //handling sorted arrays
+            if(nums[low] == nums[mid] && nums[high] == nums[mid]){
+                low++;
+                high--;
+                continue;
+            }
 
             if(nums[low] <= nums[mid]){
                 if(target >= nums[low] && target < nums[mid]){
@@ -27,16 +33,12 @@ public class SearchSortedRotatedArray {
                 }
             }
             else{
-                System.out.println(mid);
-
                 if(target > nums[mid] && target <= nums[high]){
                     low = mid + 1;
                 }
                 else{
                     high = mid -1;
                 }
-                System.out.println(mid);
-
             }
         }
         return -1;
