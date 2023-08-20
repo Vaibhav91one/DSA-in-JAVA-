@@ -1,4 +1,4 @@
-package Misc;
+package GFGPOTD;
 import java.util.Arrays;
 
 public class NonRepeatingNumbers {
