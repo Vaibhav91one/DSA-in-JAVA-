@@ -47,7 +47,7 @@ public class SubarrayWithGivenSum {
             // while the current sum is greater than the given sum remove elements from the start.
             // Here by keeping start <  i - 1 we ensure that there is still one element in the sub array even though it is not our answer.
             // we can also replace start < i - 1 with start < n
-            while(currentSum > s && start < n){
+            while(currentSum > s && start < i - 1){
                 currentSum -= arr[start];
                 start++;
             }
