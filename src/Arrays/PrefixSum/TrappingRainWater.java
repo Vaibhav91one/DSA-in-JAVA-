@@ -1,4 +1,4 @@
-package Misc;
+package Arrays.PrefixSum;
 
 public class TrappingRainWater {
     public static void main(String[] args){
