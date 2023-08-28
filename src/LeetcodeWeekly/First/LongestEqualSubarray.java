@@ -1,4 +1,4 @@
-package LeetcodeWeekly;
+package LeetcodeWeekly.First;
 import java.util.List;
 public class LongestEqualSubarray {
     public static void main(String[] args){
