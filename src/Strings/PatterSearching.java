@@ -18,15 +18,20 @@ public class PatterSearching {
         int[] lps = new int[m];
         lps(pat,lps);
 
+        //when the pattern crosses the length of the text while matching we return
         while((n - i) >= (m -j)){
+            //if pattern characters match the characters in the text string
             if(pat.charAt(j) == S.charAt(i)){
                 i++;
                 j++;
             }
+//            if all the character match the characters in the text
             if(j == m){
                 al.add(i - j+1);
+                // putting j to the last character that matched with the text
                 j = lps[j - 1];
             }
+//            if pat and text do not match, and we still have characters from text
             else if (i < n
                     && pat.charAt(j) != S.charAt(i)) {
                 // Do not match lps[0..lps[j-1]] characters,
