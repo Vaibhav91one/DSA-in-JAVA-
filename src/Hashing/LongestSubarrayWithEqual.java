@@ -35,7 +35,7 @@ public class LongestSubarrayWithEqual {
                 res = i+1;
             }
             // if this is the first occurrence of the prefix sum we add key as prefix value and value as index of this prefix sum.
-            if(s.containsKey(prefix_sum) == false){
+            if(!s.containsKey(prefix_sum)){
                 s.put(prefix_sum, i);
             }
             // if we were given a sum, 0 would be replaced with that sum.
