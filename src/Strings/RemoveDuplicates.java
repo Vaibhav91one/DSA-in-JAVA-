@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class RemoveDuplicates {
     public static void main(String[] args){
         String S = "zvvo";
-
+        System.out.println(removeDups(S));
     }
 
     static String removeDups(String S) {
