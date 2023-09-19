@@ -22,7 +22,7 @@ public class TwoOddAppearance {
                 res[1] = res[1] ^ arr[i];
             }
         }
-        Arrays.sort(res);
+//        Arrays.sort(res);
 //        reverse(res);
         return res;
     }
