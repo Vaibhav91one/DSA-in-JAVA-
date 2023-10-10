@@ -1,5 +1,5 @@
 package Arrays;
-
+import java.util.HashMap;
 public class MajorityElement {
     public static void main(String[] args){
         int N = 5;
@@ -8,6 +8,7 @@ public class MajorityElement {
     }
 
     public static int MajorElement(int[] nums){
+        HashMap<Integer, Integer> hm = new HashMap<>();
         int size = nums.length;
         int res = 0;
         int count = 1;
